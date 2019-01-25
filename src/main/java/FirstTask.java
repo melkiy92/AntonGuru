@@ -1,22 +1,23 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class FirstTask {
 
     private FirstTask(){};
 
-    static int factorial(int n) throws IllegalArgumentException {
-        if( n >= 0 ) {
-            int factorial = 1;
-            for( int i = 1; i <= n; i++ ) {
-                factorial *= i;
-            }
-            return factorial;
-        } else {
+    static int factorial(int n) {
+        if( n < 0 ) {
             throw new IllegalArgumentException("The argument must be positive.");
-    }
+        }
+        int factorial = 1;
+        for( int i = 1; i <= n; i++ ) {
+            factorial *= i;
+        }
+        return factorial;
     }
 
-    static int factorial_recursion (int n) throws IllegalArgumentException {
+
+    static int factorialRecursion (int n) throws IllegalArgumentException {
         int factorial = 1;
         if (n == 1 || n == 0) {
             return factorial;
@@ -24,7 +25,7 @@ public class FirstTask {
         if (n < 0) {
             throw new IllegalArgumentException("The argument must be positive.");
         }
-        factorial = n * factorial_recursion(n-1);
+        factorial = n * factorialRecursion(n-1);
         return factorial;
     }
 
@@ -32,6 +33,9 @@ public class FirstTask {
     static String binaryToDecimal(String binaryNumber) {
         int iDecimal = 0;
         for(int i = 0; i < binaryNumber.length(); i++) {
+            if(binaryNumber.charAt(i) != '0' || binaryNumber.charAt(i) != '1') {
+                return "Not binary";
+            }
             iDecimal = iDecimal * 2 + Character.digit(binaryNumber.charAt(i), 10);
         }
         String sDecimal = Integer.toString(iDecimal);
@@ -40,7 +44,7 @@ public class FirstTask {
 
     static String decimalToBinary(String decimalNumber) {
         int iDecimal = Integer.parseInt(decimalNumber);
-        ArrayList<Integer> arrBinary = new ArrayList();
+        List<Integer> arrBinary = new ArrayList();
         do {
             int mod = iDecimal % 2;
             arrBinary.add(mod);
@@ -74,10 +78,9 @@ public class FirstTask {
         return array;
     }
 
-    static String getMonthName(int monthOrder, String language) throws IllegalArgumentException {
-        if (language != "en" && language != "ru" ) {
-            System.out.println("Unknown Language");
-            throw new IllegalArgumentException();
+    static String getMonthName(int monthOrder, String language) {
+        if (!language.equals("en") && !language.equals("ru") ) {
+            return "Unknown Language";
         }
         String month = "";
         switch(monthOrder) {
@@ -95,7 +98,6 @@ public class FirstTask {
             case 12: month = (language == "en" ? "December" : "Декабрь"); break;
             default: month = (language == "en" ? "Unknown Month" : "Неизвестный месяц");
         }
-        System.out.println(month);
     return month;
     }
 }

@@ -1,11 +1,11 @@
 import java.util.Arrays;
 
-public class Test {
+public class FirstTaskTest {
 
     public static void main(String[] args) {
         System.out.println(FirstTask.factorial(0)); //1
-        System.out.println(FirstTask.factorial_recursion(-3)); //error
-        System.out.println(FirstTask.factorial_recursion(5)); //125
+        System.out.println(FirstTask.factorialRecursion(-3)); //error
+        System.out.println(FirstTask.factorialRecursion(5)); //125
         System.out.println(FirstTask.binaryToDecimal("1011011")); //91
         System.out.println(FirstTask.binaryToDecimal("11001")); //25
         System.out.println(FirstTask.binaryToDecimal("0111")); //7
