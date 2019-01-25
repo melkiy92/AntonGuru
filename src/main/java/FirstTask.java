@@ -33,7 +33,7 @@ public class FirstTask {
     static String binaryToDecimal(String binaryNumber) {
         int iDecimal = 0;
         for(int i = 0; i < binaryNumber.length(); i++) {
-            if(binaryNumber.charAt(i) != '0' || binaryNumber.charAt(i) != '1') {
+            if(binaryNumber.charAt(i) != '0' && binaryNumber.charAt(i) != '1') {
                 return "Not binary";
             }
             iDecimal = iDecimal * 2 + Character.digit(binaryNumber.charAt(i), 10);
