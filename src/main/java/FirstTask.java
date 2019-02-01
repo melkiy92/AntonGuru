@@ -29,7 +29,6 @@ public class FirstTask {
         return factorial;
     }
 
-
     static String binaryToDecimal(String binaryNumber) {
         int iDecimal = 0;
         for(int i = 0; i < binaryNumber.length(); i++) {
@@ -51,12 +50,14 @@ public class FirstTask {
             iDecimal /= 2;
         } while( iDecimal > 0);
         int iLastBinaryElem = arrBinary.size() - 1;
-        String sBinaryResult = "";
+        StringBuilder sbBinaryResult = new StringBuilder();
         for(int i = 0; i <= iLastBinaryElem; i++ ) {
-            sBinaryResult += arrBinary.get(iLastBinaryElem - i);
+            sbBinaryResult.append(arrBinary.get(iLastBinaryElem - i));
         }
-        return sBinaryResult;
+        return sbBinaryResult.toString();
     }
+
+
 
     //It was implemented using the method "bubble sort"
     static int[] sortArray(int[] array, boolean asc) {
