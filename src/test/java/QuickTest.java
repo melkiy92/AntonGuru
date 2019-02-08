@@ -1,9 +1,10 @@
 import java.util.Arrays;
+import java.util.*;
 
-public class FirstTaskTest {
+public class QuickTest {
 
     public static void main(String[] args) {
-        System.out.println(FirstTask.factorial(0)); //1
+        /*System.out.println(FirstTask.factorial(0)); //1
         System.out.println(FirstTask.factorialRecursion(-3)); //error
         System.out.println(FirstTask.factorialRecursion(5)); //125
         System.out.println(FirstTask.binaryToDecimal("1011011")); //91
@@ -20,6 +21,17 @@ public class FirstTaskTest {
         FirstTask.getMonthName(10, "ru");
         FirstTask.getMonthName(31, "en");
         FirstTask.getMonthName(3, "usd");
+        String[] arr = {"6", "9", "3", "5", "7"};
+        System.out.println(Arrays.toString(SecondTask.sortArray(arr, false)));
+        System.out.println(Arrays.toString(SecondTask.getCharEntries("I like it, move it, move it.")));
+        List<Figure> list = new ArrayList<Figure>();
+        Figure circle = new Circle(3);
+        Figure square = new Square(3);
+        Figure hexagon = new Hexagon(3);
+        list.add(circle);
+        list.add(square);
+        list.add(hexagon);
+        System.out.println(SecondTask.calculateOverallArea(list));*/
     }
 
 }
