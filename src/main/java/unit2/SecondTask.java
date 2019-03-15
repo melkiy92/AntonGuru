@@ -1,6 +1,8 @@
-import java.util.*;
+package unit2;
 
-import static java.util.Arrays.*;
+import unit2.model.Figure;
+
+import java.util.*;
 
 public class SecondTask {
 
@@ -69,7 +71,7 @@ public class SecondTask {
 
         if (array.length <= 1) {
             return array;
-        } else {
+        }
             for (int i = 0; i < mid; i++) {
                 left[i] = array[i];
             }
@@ -96,7 +98,6 @@ public class SecondTask {
                 result[r++] = right[j++];
             }
             return result;
-        }
     }
 
 
@@ -114,21 +115,20 @@ public class SecondTask {
         }
 
         // Create a list from elements of HashMap
-        List<Map.Entry<Character, Integer> > sortedList =
-                new ArrayList<Map.Entry<Character, Integer> >(map.entrySet());
+        List<Map.Entry<Character, Integer>> sortedList =
+                new ArrayList<Map.Entry<Character, Integer>>(map.entrySet());
 
         // Sort the list in descending order
-        Collections.sort(sortedList, new Comparator<Map.Entry<Character, Integer> >() {
+        Collections.sort(sortedList, new Comparator<Map.Entry<Character, Integer>>() {
             public int compare(Map.Entry<Character, Integer> o1,
-                               Map.Entry<Character, Integer> o2)
-            {
+                               Map.Entry<Character, Integer> o2) {
                 return (o2.getValue()).compareTo(o1.getValue());
             }
         });
 
         // put data from sorted list to array of char
         char[] charArray = new char[sortedList.size()];
-        int i =0;
+        int i = 0;
         for (Map.Entry<Character, Integer> aa : sortedList) {
             charArray[i++] = aa.getKey();
         }

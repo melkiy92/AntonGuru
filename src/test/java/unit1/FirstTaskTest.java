@@ -1,8 +1,11 @@
+package unit1;
+
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import unit1.FirstTask;
 
-public class FirstLuxoftUtilsTest {
+public class FirstTaskTest {
     @Test
     public void getMonthNameEnTest() {
         Assert.assertEquals("January", FirstTask.getMonthName(1, "en"));
